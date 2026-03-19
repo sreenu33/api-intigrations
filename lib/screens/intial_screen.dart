@@ -33,7 +33,7 @@ class _IntialScreenState extends State<IntialScreen> {
           return ListView.builder(
             itemCount: controller.usersData.length,
             itemBuilder: (context, index) {
-              UserModel cart = controller.usersData[index];
+              UserDataModel cart = controller.usersData[index];
 
               return Card(
                 margin: const EdgeInsets.all(8),

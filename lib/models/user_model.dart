@@ -1,13 +1,13 @@
-class UserModel {
+class UserDataModel {
   int? id;
   int? userId;
   String? date;
   List<Products>? products;
   int? iV;
 
-  UserModel({this.id, this.userId, this.date, this.products, this.iV});
+  UserDataModel({this.id, this.userId, this.date, this.products, this.iV});
 
-  UserModel.fromJson(Map<String, dynamic> json) {
+  UserDataModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     userId = json['userId'];
     date = json['date'];
