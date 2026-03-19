@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
 class DummyApiController extends GetxController {
-   List<UserModel> usersData = [];
+   List<UserDataModel> usersData = [];
   final String api =
       "https://fakestoreapi.com/carts";
   Future<void> getAllUsers() async {
@@ -14,7 +14,7 @@ class DummyApiController extends GetxController {
     log("responce>>>>>${responce.body}");
     if (responce.statusCode == 200) {
       final List data = jsonDecode(responce.body);
-       usersData = data.map((json) => UserModel.fromJson(json)).toList();
+       usersData = data.map((json) => UserDataModel.fromJson(json)).toList();
       update();
     } else {
       throw Exception("Failed to load Users");
